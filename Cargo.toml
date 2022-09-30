@@ -1,0 +1,8 @@
+[package]
+name = "rustycpp"
+version = "0.1.0"
+edition = "2021"
+
+
+[build-dependencies]
+cc = "1.0" # Needed for the main script to actaully run the function from C++
