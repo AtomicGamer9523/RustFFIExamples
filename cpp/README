@@ -1,3 +1,2 @@
-Examples of rust FFI with C++
-includes both rust -> C++ and C++ -> rust
+Examples of rust FFI with C++ and C
 as well as an example of a basic logger wrapper in c++, that internally uses rust
