@@ -3,7 +3,7 @@
 
 int main(int argc, const char** argv) {
     // Call Rust function
-    int result = addone(2);
+    int result = addone_rs(2);
     printf("[c++ ] %d\n",result);
 
     return 0;

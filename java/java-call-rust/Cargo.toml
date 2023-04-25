@@ -1,0 +1,13 @@
+[package]
+name = "java-call-rust"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rustlib"
+path = "lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+utils = { path = "../../utils" }
+jni = "0.21"
