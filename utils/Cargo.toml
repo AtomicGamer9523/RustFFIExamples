@@ -3,5 +3,9 @@ name = "utils"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "utils"
+path = "src/lib"
+
 [dependencies]
 utils_macros = { path = "./macros" }
