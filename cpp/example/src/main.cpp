@@ -1,5 +1,4 @@
-#include "logger.cpp"
-#include <string>
+#include "logger"
 
 using namespace std;
 
