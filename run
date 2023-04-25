@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT_NAME="$1"
-arrIN=(${PROJECT_NAME//\// })
+arrIN=(${PROJECT_NAME//\//})
 LIB_NAME=${arrIN[1]}
 
 app_path=$0
@@ -28,4 +28,8 @@ if [[ $PROJECT_NAME = cpp* ]]
 then
   gcc -g "$APP_HOME/$PROJECT_NAME/src/main.cpp" -o "$APP_HOME/$PROJECT_NAME/main.app" "-l$LIB_NAME" "-L$APP_HOME/.build/bin"
   cd "$APP_HOME/$PROJECT_NAME/" && LD_LIBRARY_PATH=$APP_HOME/.build/bin $APP_HOME/$PROJECT_NAME/main.app
+fi
+if [[ $PROJECT_NAME = rust* ]]
+then
+  cd "$APP_HOME/$PROJECT_NAME/" && cargo +nightly run -Z unstable-options --target-dir $APP_HOME/.build/$PROJECT_NAME
 fi
