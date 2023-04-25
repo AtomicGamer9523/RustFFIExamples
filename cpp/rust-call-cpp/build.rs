@@ -1,6 +1,8 @@
 
 /// Build script, build C++ code and link it to Rust.
 fn main() {
+
+    println!("cargo:rerun-if-changed=src/main.cpp");
 	
     // Handles all the background compiling and linking.
     cc::Build::new()

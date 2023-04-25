@@ -1,0 +1,23 @@
+#!/bin/bash
+
+PROJECT_NAME=rust-call-cpp
+CARGO_LIB_NAME=rust-call-cpp
+
+# Standard Copy & Paste
+app_path=$0
+while
+    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
+    [ -h "$app_path" ]
+do
+    ls=$( ls -ld "$app_path" )
+    link=${ls#*' -> '}
+    case $link in             #(
+      /*)   app_path=$link ;; #(
+      *)    app_path=$APP_HOME$link ;;
+    esac
+done
+APP_HOME=$( cd "${APP_HOME:-./}" && cd .. && pwd -P ) || exit
+# END
+
+cargo +nightly build -Z unstable-options --target-dir $APP_HOME/.build/$PROJECT_NAME --out-dir $APP_HOME/.build/bin
+cargo run

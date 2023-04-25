@@ -1,0 +1,14 @@
+[package]
+name = "utils"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies.quote]
+version = "1"
+
+[dependencies.syn]
+version = "2"
+features = ["full"]

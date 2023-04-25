@@ -1,5 +1,7 @@
-**/target
-**/*.lock
-
-**/.vs
-**/.vscode
+target
+*.lock
+.build
+.vs
+.vscode
+.cargo
+*.app

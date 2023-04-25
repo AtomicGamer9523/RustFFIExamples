@@ -1,0 +1,12 @@
+[package]
+name = "cpp-call-rust"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "rust/lib.rs"
+name = "logrs"
+crate-type = ["cdylib"]
+
+[dependencies]
+utils = { path = "../../utils" }

@@ -1,5 +1,4 @@
-
-/// Neded for rust to know what is is written in C
+// Neded for rust to know what is is written in C
 extern "C" {
 
     // declares print_num
