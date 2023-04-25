@@ -1,4 +1,4 @@
-mod level;use level::*;
+#[path="log.level"]mod level;use level::*;
 use std::ffi::*;
 
 #[utils::ffi(unsafe)]
